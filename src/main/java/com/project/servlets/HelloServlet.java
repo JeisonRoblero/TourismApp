@@ -1,4 +1,4 @@
-package com.project.tourismapp;
+package com.project.servlets;
 
 import java.io.*;
 
