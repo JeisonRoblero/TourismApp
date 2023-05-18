@@ -23,10 +23,14 @@
         <h3 class="main-title">Tourism App</h3>
     </div>
 
-    <h1>Hola mundooooooo</h1>
-
+    <h2>...</h2>
+    <jsp:include page="pages/signup.jsp"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/app.js"></script>
+
+    <script>
+        showSplashScreen();
+    </script>
 </body>
 </html>
