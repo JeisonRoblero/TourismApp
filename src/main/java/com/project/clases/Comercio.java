@@ -1,8 +1,6 @@
 package com.project.clases;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Comercio {
 
@@ -33,11 +31,21 @@ public class Comercio {
     public Comercio() {
     }
 
+    //Registra un nuevo comercio en la base de datos
     public boolean agregarComercio(String nombre_comercio, String correo, String contrasenia, int telefono, String direccion, int no_doc_SAT, String descripcion, float calificacion, int id_tipoC, int id_localidad){
         ConexionOracle con = new ConexionOracle();
+        ResultSet rs, rs1;
         try {
             Statement st = con.conexion().createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM \"no_doc_sat\"");
+            rs = st.executeQuery("SELECT * FROM \"no_doc_sat\"");
+            rs1 = st.executeQuery("SELECT * FROM \"comercio\"");
+            //Valida que la contraseña y el nombre de usuario no esten en uso aún
+            while (rs1.next()){
+                if(rs1.getString(2).equals(nombre_comercio) || rs1.getString(3).equals(correo)){
+                    return false;
+                }
+            }
+            //Valida que el numero de documento de la SAT ingresado sea veridico
             while (rs.next()){
                 if(rs.getInt(1) == no_doc_SAT){
                     st.executeUpdate("INSERT INTO \"comercio\" (\"nombre_comercio\", \"correo\", \"contraseña\", \"telefono\",\"direccion\",\"No_doc_SAT\",\"descripcion\",\"calificacion\",\"id_tipoC\", \"id_localidad\") " +
@@ -47,6 +55,25 @@ public class Comercio {
             }
             return false;
         }catch (SQLException e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    //Se realiza el login del Comercio
+    public boolean loginComercio(String correoONombre_comercio, String contrasenia){
+        ConexionOracle con = new ConexionOracle();
+        try {
+            Statement st = con.conexion().createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM \"comercio\"");
+            //Se valida que el nombre o correo y contraseña ingresados si esten registrados
+            while (rs.next()){
+                if((rs.getString(2).equals(correoONombre_comercio) | rs.getString(3).equals(correoONombre_comercio)) && (rs.getString(4).equals(contrasenia))){
+                    return true;
+                }
+            }
+            return false;
+        } catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
