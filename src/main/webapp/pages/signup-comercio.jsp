@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 
     <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
-    <title>Signup | Tourism App</title>
+    <title>Signup Comercio | Tourism App</title>
     <link rel="stylesheet" href="../css/form-style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -21,12 +21,11 @@
     <div class="texto1">
         Por favor, ingresa tus credenciales:
     </div>
-    <form method="post" action="../TuristaServlet">
-        <input type="hidden" name="login" value="false">
+    <form method="post" action="../ComercioServlet">
         <div class="txt_field">
             <input type="text" name="usuario" id="usuario" required>
             <span></span>
-            <label for="usuario">Usuario <span style="color: red">*</span></label>
+            <label for="usuario">Nombre comercio <span style="color: red">*</span></label>
         </div>
         <div class="txt_field">
             <input type="password" name="contra" id="contra" required>
@@ -47,6 +46,42 @@
             <input type="number" name="telefono" id="telefono" required>
             <span></span>
             <label for="telefono">Numero <span style="color: red">*</span></label>
+        </div>
+
+        <div class="txt_field">
+            <input type="text" name="direccion" id="direccion" required>
+            <span></span>
+            <label for="direccion">Dirección <span style="color: red">*</span></label>
+        </div>
+
+        <div class="txt_field">
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+            <span></span>
+            <label for="descripcion">Descripción <span style="color: red">*</span></label>
+        </div>
+
+        <select name="tipo_comercio">
+            <option value="1">Opción 1</option>
+            <option value="2">Opción 2</option>
+            <option value="3">Opción 3</option>
+        </select>
+
+        <select name="localidad">
+            <option value="1">Opción 1</option>
+            <option value="2">Opción 2</option>
+            <option value="3">Opción 3</option>
+        </select>
+
+        <div class="txt_field">
+            <input type="number" name="calificacion" id="calificacion" required>
+            <span></span>
+            <label for="calificacion">Calificación <span style="color: red">*</span></label>
+        </div>
+
+        <div class="txt_field">
+            <input type="number" name="no_doc_sat" id="no_doc_sat" required>
+            <span></span>
+            <label for="no_doc_sat">No. Documento SAT <span style="color: red">*</span></label>
         </div>
 
         <input type="checkbox" required><b> Acepto Terminos y condiciones</b> <br>

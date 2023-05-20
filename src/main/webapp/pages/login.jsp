@@ -21,7 +21,7 @@
     <div class="texto1">
         Por favor, ingresa tus credenciales:
     </div>
-    <form method="post" action="TuristaServlet">
+    <form method="post" action="../TuristaServlet">
         <input type="hidden" name="login" value="true">
         <div class="txt_field">
             <input type="text" name="usuario" id="usuario" required>

@@ -10,10 +10,6 @@ import java.io.IOException;
 
 @WebServlet(name = "TuristaServlet", value = "/TuristaServlet")
 public class TuristaServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -25,10 +21,9 @@ public class TuristaServlet extends HttpServlet {
             String confContra = request.getParameter("conf_contra");
             String correo = request.getParameter("correo");
             int telefono = Integer.parseInt(request.getParameter("telefono"));
-            String opcionLogin = request.getParameter("opcion_login");
 
             // Se valida que la contraseña y la confirmación de las contraseñas coincidan
-            if(contra.equals(confContra)) {
+            if(!contra.equals(confContra)) {
                 response.sendRedirect("./pages/signup.jsp?contra=1");
             }
 
@@ -45,7 +40,44 @@ public class TuristaServlet extends HttpServlet {
             }
 
         } else if(request.getParameter("login").equals("true")) {
+            // Se obtiene los valores de los parametros ingresados desde el formulario y se almacenan en variables locales
+            String opcionLogin = request.getParameter("opcion_login");
+            String usuario = request.getParameter("usuario");
+            String contra = request.getParameter("contra");
 
+            // Validando si el usuario ingreso como turista o como comercio
+            if(opcionLogin.equals("turista")) {
+                // Instancia de turista para iniciar sesión al turista
+                Turista turista = new Turista();
+                boolean logged = turista.loginTurista(usuario, contra);
+
+                // Si se produce algún error al iniciar sesión se redirecciona a la página de
+                // login pero con el parámetro de error distintivo (Para modales en el frontend)
+                if(logged) {
+                    HttpSession session = request.getSession();
+                    session.setAttribute("usuario", usuario);
+                    response.sendRedirect("./");
+                } else {
+                    response.sendRedirect("./pages/login.jsp?error=1");
+                }
+            } else if(opcionLogin.equals("comercio")) {
+                // Instancia de comercio para iniciar sesión al comercio
+                Comercio comercio = new Comercio();
+                boolean logged = comercio.loginComercio(usuario, contra);
+
+                // Si se produce algún error al iniciar sesión se redirecciona a la página de
+                // login pero con el parámetro de error distintivo (Para modales en el frontend)
+                if(logged) {
+                    HttpSession session = request.getSession();
+                    session.setAttribute("comercio", usuario);
+                    response.sendRedirect("./");
+                } else {
+                    response.sendRedirect("./pages/login.jsp?error=1");
+                }
+            }
         }
+    }
+
+    public void destroy() {
     }
 }
