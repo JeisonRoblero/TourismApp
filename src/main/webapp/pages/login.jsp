@@ -21,29 +21,31 @@
     <div class="texto1">
         Por favor, ingresa tus credenciales:
     </div>
-    <form method="post">
+    <form method="post" action="TuristaServlet">
+        <input type="hidden" name="login" value="true">
         <div class="txt_field">
-            <input type="text" name="txt_field" id="usuario" required>
+            <input type="text" name="usuario" id="usuario" required>
             <span></span>
-            <label for="txt_field">Usuario <span style="color: red">*</span></label>
+            <label for="usuario">Usuario <span style="color: red">*</span></label>
         </div>
         <div class="txt_field">
-            <input type="password" name="txt_field" id="contraseña" required>
+            <input type="password" name="contra" id="contra" required>
             <span></span>
-            <label for="txt_field">Contraseña <span style="color: red">*</span></label>
+            <label for="contra">Contraseña <span style="color: red">*</span></label>
         </div>
         <div class="tipocuenta-container">
             <div class="tipocuenta">
-                <input type="radio" name="size" id="turista" checked="checked">
+                <input type="radio" name="opcion_login" id="turista" checked="checked" value="turista">
                 <label for="turista">Turista</label>
-                <input type="radio" name="size" id="comercio">
+                <input type="radio" name="opcion_login" id="comercio" value="comercio">
                 <label for="comercio">Comercio</label>
             </div>
         </div>
 
         <input type="submit" value="Iniciar Sesion">
+
         <div class="signup_link">
-            ¿No tienes una cuenta? <a href="#">¡Registrate!</a>
+            ¿No tienes una cuenta? <a href="signup.jsp">¡Registrate!</a>
         </div>
         <section class="buttons">
             <a href="#" class="fa fa-facebook" style="background: blue;"></a>
