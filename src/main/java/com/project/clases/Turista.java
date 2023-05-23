@@ -15,8 +15,7 @@ public class Turista {
         this.contrasenia = contrasenia;
     }
 
-    public Turista() {
-    }
+    public Turista() {}
 
     //Registra un nuevo turista en la base de datos
     public boolean agregarTurista(String nombre_user, String correo, int telefono, String contrasenia){
@@ -24,13 +23,19 @@ public class Turista {
         try {
             Statement st = con.conexion().createStatement();
             ResultSet rs = st.executeQuery("SELECT * FROM \"turista\"");
-            //Se valida que el nombre de usuario no este repetido
+            //Se valida que el nombre de usuario o correo no esten repetidos
             while (rs.next()){
                 if(rs.getString(2).equals(nombre_user) || rs.getString(3).equals(correo)){
-                   return false;
+                    rs.close();
+                    st.close();
+                    con.close();
+                    return false;
                 }
             }
             st.executeUpdate("INSERT INTO \"turista\" (\"nombre_user\", \"correo\", \"telefono\", \"contraseña\") VALUES ('"+nombre_user+"','"+correo+"',"+telefono+",'"+contrasenia+"')");
+            rs.close();
+            st.close();
+            con.close();
             return true;
         }catch (SQLException e){
             e.printStackTrace();
@@ -47,9 +52,15 @@ public class Turista {
             //Se valida que el nombre o correo y contraseña ingresados si esten registrados
             while (rs.next()){
                 if((rs.getString(2).equals(correoONombre_user) | rs.getString(3).equals(correoONombre_user)) && (rs.getString(5).equals(contrasenia))){
+                    rs.close();
+                    st.close();
+                    con.close();
                     return true;
                 }
             }
+            rs.close();
+            st.close();
+            con.close();
             return false;
         } catch (SQLException e) {
             e.printStackTrace();

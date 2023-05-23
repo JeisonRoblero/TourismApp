@@ -12,14 +12,15 @@ public class Localidad {
         this.ubicacion = ubicacion;
     }
 
-    public Localidad() {
-    }
+    public Localidad() {}
 
     public boolean agregarLocalidad(String nombre, String ubicacion){
         ConexionOracle con = new ConexionOracle();
         try {
             Statement st = con.conexion().createStatement();
             st.executeUpdate("INSERT INTO \"localidad\" (\"nombre\",\"ubicacion\") VALUES ('"+nombre+"','"+ubicacion+"')");
+            st.close();
+            con.close();
             return true;
         }catch (SQLException e){
             e.printStackTrace();

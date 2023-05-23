@@ -18,4 +18,12 @@ public class ConexionOracle {
         return con;
     }
 
+    public void close(){
+        try {
+            con.close();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
 }
