@@ -49,7 +49,7 @@
             <label for="telefono">Numero <span style="color: red">*</span></label>
         </div>
 
-        <input type="checkbox" required><b> Acepto Terminos y condiciones</b> <br>
+        <input type="checkbox" required><b> Acepto Terminos y condiciones</b> <br><br>
 
         <input type="submit" value="Registrarse">
         <div class="signup_link">
