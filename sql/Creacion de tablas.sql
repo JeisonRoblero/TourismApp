@@ -21,7 +21,7 @@ CREATE TABLE "localidad" (
 );
 
 CREATE TABLE "comercio" (
-  "id_comecio" int,
+  "id_comercio" int,
   "nombre_comercio" varchar2(50),
   "correo" varchar2(100),
   "contraseña" varchar2(50),
@@ -29,10 +29,10 @@ CREATE TABLE "comercio" (
   "direccion" varchar2(100),
   "No_doc_SAT" int,
   "descripcion" varchar2(550),
-  "calificacion" number(2,1),
+  "calificacion" double precision,
   "id_tipoC" int,
   "id_localidad" int,
-  PRIMARY KEY ("id_comecio"),
+  PRIMARY KEY ("id_comercio"),
   CONSTRAINT "FK_comercio.id_tipoC"
     FOREIGN KEY ("id_tipoC")
       REFERENCES "tipo_comercio"("id_tipoC"),
@@ -45,19 +45,19 @@ CREATE TABLE "producto" (
   "id_producto" int,
   "nombre_producto" varchar2(50),
   "descripcion" varchar2(150),
-  "precio" float,
+  "precio" double precision,
   "estado" int,
   "id_comercio" int,
   PRIMARY KEY ("id_producto"),
   CONSTRAINT "FK_producto.id_comercio"
     FOREIGN KEY ("id_comercio")
-      REFERENCES "comercio"("id_comecio")
+      REFERENCES "comercio"("id_comercio")
 );
 
 CREATE TABLE "carrito" (
   "id_carrito" int,
-  "total" float,
-  "id_turista" float,
+  "total" double precision,
+  "id_turista" int,
   PRIMARY KEY ("id_carrito"),
   CONSTRAINT "FK_carrito.id_turista"
     FOREIGN KEY ("id_turista")
@@ -81,7 +81,7 @@ CREATE TABLE "factura" (
   "id_factura" int,
   "descripción" varchar2(100),
   "date" date,
-  "total" float,
+  "total" double precision,
   "id_carrito" int,
   PRIMARY KEY ("id_factura")
 );

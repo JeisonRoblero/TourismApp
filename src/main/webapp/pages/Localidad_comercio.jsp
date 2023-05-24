@@ -98,7 +98,7 @@ body {
 
 <!-- Pie de pagina que contiene los logos para redireccion-->
 
-<footer style="position: absolute; background-color: white; margin-top: 6cm; width: 100%; display: flex; justify-content: space-between; padding: 10px;">
+<footer style="position: absolute; background-color: white; margin-top: 21.2cm; width: 100%; display: flex; justify-content: space-between; padding: 10px;">
     <div style="margin-left:5px">
         <a href="#" style="text-decoration: none; color: black;">
             <span class="material-symbols-outlined">arrow_back</span>

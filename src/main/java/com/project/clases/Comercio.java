@@ -11,11 +11,11 @@ public class Comercio {
     private String direccion;
     private int No_doc_SAT;
     private String descripcion;
-    private float calificacion;
+    private double calificacion;
     private int id_tipoC;
     private int id_localidad;
 
-    public Comercio(String nombre_comercio, String correo, String contrasenia, int telefono, String direccion, int no_doc_SAT, String descripcion, float calificacion, int id_tipoC, int id_localidad) {
+    public Comercio(String nombre_comercio, String correo, String contrasenia, int telefono, String direccion, int no_doc_SAT, String descripcion, double calificacion, int id_tipoC, int id_localidad) {
         this.nombre_comercio = nombre_comercio;
         this.correo = correo;
         this.contrasenia = contrasenia;
@@ -28,28 +28,34 @@ public class Comercio {
         this.id_localidad = id_localidad;
     }
 
-    public Comercio() {
-    }
+    public Comercio() {}
 
     //Registra un nuevo comercio en la base de datos
-    public boolean agregarComercio(String nombre_comercio, String correo, String contrasenia, int telefono, String direccion, int no_doc_SAT, String descripcion, float calificacion, int id_tipoC, int id_localidad){
+    public boolean agregarComercio(String nombre_comercio, String correo, String contrasenia, int telefono, String direccion, int no_doc_SAT, String descripcion, double calificacion, int id_tipoC, int id_localidad){
         ConexionOracle con = new ConexionOracle();
         ResultSet rs, rs1;
         try {
             Statement st = con.conexion().createStatement();
+            Statement st1 = con.conexion().createStatement();
             rs = st.executeQuery("SELECT * FROM \"no_doc_sat\"");
-            rs1 = st.executeQuery("SELECT * FROM \"comercio\"");
-            //Valida que la contraseña y el nombre de usuario no esten en uso aún
+            rs1 = st1.executeQuery("SELECT * FROM \"comercio\"");
+            //Valida que el correo y el nombre de usuario no esten en uso aún
             while (rs1.next()){
                 if(rs1.getString(2).equals(nombre_comercio) || rs1.getString(3).equals(correo)){
+                    rs1.close();
+                    st1.close();
+                    con.close();
                     return false;
                 }
             }
             //Valida que el numero de documento de la SAT ingresado sea veridico
             while (rs.next()){
                 if(rs.getInt(1) == no_doc_SAT){
-                    st.executeUpdate("INSERT INTO \"comercio\" (\"nombre_comercio\", \"correo\", \"contraseña\", \"telefono\",\"direccion\",\"No_doc_SAT\",\"descripcion\",\"calificacion\",\"id_tipoC\", \"id_localidad\") " +
+                    st.executeUpdate("INSERT INTO \"comercio\" (\"nombre_comercio\", \"correo\", \"contraseña\", \"telefono\",\"direccion\",\"No_doc_SAT\",\"descripcion\",\"calificacion\",\"id_tipoC\", \"id_localidad\")" +
                             "VALUES ('"+nombre_comercio+"','"+correo+"','"+contrasenia+"',"+telefono+",'"+direccion+"',"+no_doc_SAT+",'"+descripcion+"',"+calificacion+","+id_tipoC+","+id_localidad+")");
+                    rs.close();
+                    st.close();
+                    con.close();
                     return true;
                 }
             }
@@ -69,9 +75,15 @@ public class Comercio {
             //Se valida que el nombre o correo y contraseña ingresados si esten registrados
             while (rs.next()){
                 if((rs.getString(2).equals(correoONombre_comercio) | rs.getString(3).equals(correoONombre_comercio)) && (rs.getString(4).equals(contrasenia))){
+                    rs.close();
+                    st.close();
+                    con.close();
                     return true;
                 }
             }
+            rs.close();
+            st.close();
+            con.close();
             return false;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -135,11 +147,11 @@ public class Comercio {
         this.descripcion = descripcion;
     }
 
-    public float getCalificacion() {
+    public double getCalificacion() {
         return calificacion;
     }
 
-    public void setCalificacion(float calificacion) {
+    public void setCalificacion(double calificacion) {
         this.calificacion = calificacion;
     }
 
