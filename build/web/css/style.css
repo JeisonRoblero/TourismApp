@@ -1,0 +1,54 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colores ==========*/
+    --first-hue: 111;
+    --sat: 43%;
+    --lig: 46%;
+    --alp: 1;
+    --background-color: hsla(var(--first-hue),var(--sat),var(--lig),var(--alp));
+    --first-container: hsla(var(--first-hue),var(--sat),90%,var(--alp));
+
+    /*========== Fuentes ==========*/
+    --main-font: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+.splash-screen {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: var(--background-color);
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+.splash-logo {
+    position: relative;
+    background: var(--first-container);
+    padding: 10px;
+    border-radius: 0.5rem;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.splash-img {
+    width: 100px;
+    height: 100px;
+}
+
+.main-title {
+    font-weight: bolder;
+}
