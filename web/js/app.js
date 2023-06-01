@@ -5,8 +5,8 @@ async function showSplashScreen() {
    setTimeout(() => {
       splashScreen.style.opacity = "0"
       setTimeout(() => {
-         // splashScreen.style.display = "none";
+         splashScreen.style.display = "none";
          window.location.href = "pages/signup.jsp";
-      }, 1);
+      }, 500);
    }, 2500);
 }

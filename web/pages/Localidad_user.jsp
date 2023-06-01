@@ -42,7 +42,7 @@ body {
 <!--logo inicial-->
 <container>
 <div class="logo" style="position: relative; margin-bottom: 45rem; margin-left: 10%;">
-    <img src="../images/logo.png"
+    <img src="https://scontent.fgua9-2.fna.fbcdn.net/v/t39.30808-6/347088454_819413243164003_649845713433962275_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=JABg94ld-TUAX8iOFKd&_nc_ht=scontent.fgua9-2.fna&oh=00_AfD32l8KdDMANrQIrTEt66GecBUHFGn9c6w111XN0Ptx-Q&oe=6469B39A" 
     width="80" height="80" style="border-radius: 70rem;">
   </div>
 

@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="logo-s">
-    <img src="../images/logo.png">
+    <img src="https://scontent.fgua9-2.fna.fbcdn.net/v/t39.30808-6/347088454_819413243164003_649845713433962275_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=JABg94ld-TUAX8iOFKd&_nc_ht=scontent.fgua9-2.fna&oh=00_AfD32l8KdDMANrQIrTEt66GecBUHFGn9c6w111XN0Ptx-Q&oe=6469B39A">
 </div>
 <div class="centro">
     <h1 style="margin-top: -33%">Tourism App</h1>

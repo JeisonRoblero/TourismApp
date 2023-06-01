@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cuerpolocaltienda {
+background-color: #52A943;
+}
+
+.start_localtienda {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 70px;
+margin-top: 5px;
+}
+
+.contenedor_whitetienda {
+    padding: 5px; /*marco*/
+    border-radius: 0.5rem;
+    background-color: white;
+    width: 90%; /*abarcar 90% screen*/
+    max-width: 762px; /*pixeles iphone 12*/
+    height: auto; /*altura automatica*/
+}
+
+.main_principaltienda {
+    /*align-items: center;*/
+    margin-top: 5px;
+    justify-content: center;
+    display:flex;
+    min-height: 80vh;/*adapte al 80% screen*/
+}
+
+.contenedor_whitetienda {
+    padding: 10px;
+
+}
+
+/*PRIMER INPUT*/
+.texto_localidad1tienda {
+    background: white ;
+    border-radius: 0.75rem;
+    /*align-items: center;*/
+    justify-items: center;
+    display:flex;
+    border: inherit;
+    border-color: rgb(220, 220, 220);
+    box-shadow: -2px 5px 5px 0px rgba(198,198,198,0.75);
+    -webkit-box-shadow: -2px 5px 5px 0px rgba(198,198,198,0.75);
+    -moz-box-shadow: -2px 5px 5px 0px rgba(198,198,198,0.75);
+    margin-top: 2px;
+}
+
+.inicio_type1 {
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    margin-left: 4px;
+    width: 100%;
+    padding: 12px;
+}
+
+.inicio_type1::-webkit-input-placeholder {
+    font-weight: bold;
+    color: gray;
+}
+
+
+/*SEGUNDO INPUT*/
+.inicio_type2 {
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    margin-left: 4px;
+    width: 100%;
+    height: 100px;
+    padding: 12px;
+}
+
+.inicio_type2::-webkit-input-placeholder {
+    font-weight: bold;
+    color: gray;
+}
+
+/*TERCER INPUT*/
+.inicio_type3 {
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    margin-left: 4px;
+    width: 100%;
+    padding: 12px;
+}
+
+.inicio_type3::-webkit-input-placeholder {
+    font-weight: bold;
+    color: gray;
+    text-align: center;
+}
+
+/*CUARTO INPUT*/
+.texto_localidad4 {
+    background: white ;
+    border-radius: 0.75rem;
+    /*align-items: center;*/
+    justify-items: center;
+    display:flex;
+    border: inherit;
+    border-color: rgb(220, 220, 220);
+    box-shadow: -2px 5px 5px 0px rgba(198,198,198,0.75);
+    -webkit-box-shadow: -2px 5px 5px 0px rgba(198,198,198,0.75);
+    -moz-box-shadow: -2px 5px 5px 0px rgba(198,198,198,0.75);
+    margin-top: 7.5px;
+}
+
+/*ESTILOS PRIMER BOTON AGREGAR TIENDA
+Los estilos se colocaron directamente en 
+el html ya que tenian un inconveniente de version
+}*/
+
+/*ESTILOS DE LAS LETRAS PRODUCTOS*/
+.datos_producto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: auto;
+    margin-top: -15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*INPUT 1 - NOMBRE PRODUCTO*/
+.nombre_producto {
+    background: white ;
+    border-radius: 0.75rem;
+    /*align-items: center;*/
+    justify-items: center;
+    display:flex;
+    border: inherit;
+    border-color: rgb(220, 220, 220);
+    box-shadow: -2px 5px 5px 0px rgba(198,198,198,0.75);
+    -webkit-box-shadow: -2px 5px 5px 0px rgba(198,198,198,0.75);
+    -moz-box-shadow: -2px 5px 5px 0px rgba(198,198,198,0.75);
+    margin-top: -25px;
+}
+
+.n_producto1 {
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    margin-left: 4px;
+    width: 100%;
+    padding: 12px;
+}
+
+.n_producto1::-webkit-input-placeholder {
+    font-weight: bold;
+    color: gray;
+    text-align: left;
+}
+
+/*INPUT 2 PRECIO OBLIGATORIO*/
+.precio {
+    background: white ;
+    border-radius: 0.75rem;
+    /*align-items: center;*/
+    justify-items: center;
+    display:flex;
+    border: inherit;
+    border-color: rgb(220, 220, 220);
+    box-shadow: -2px 5px 5px 0px rgba(198,198,198,0.75);
+    -webkit-box-shadow: -2px 5px 5px 0px rgba(198,198,198,0.75);
+    -moz-box-shadow: -2px 5px 5px 0px rgba(198,198,198,0.75);
+    margin-top: 7.5px;
+}
+
+/*INPUT 3 ENLACE DE IMAGEN*/
+.imagen_producto {
+    background: white ;
+    border-radius: 0.75rem;
+    /*align-items: center;*/
+    justify-items: center;
+    display:flex;
+    border: inherit;
+    border-color: rgb(220, 220, 220);
+    box-shadow: -2px 5px 5px 0px rgba(198,198,198,0.75);
+    -webkit-box-shadow: -2px 5px 5px 0px rgba(198,198,198,0.75);
+    -moz-box-shadow: -2px 5px 5px 0px rgba(198,198,198,0.75);
+    margin-top: 7.5px;
+}
+
+/*ESTILOS DEL BOTON 2 AGREGAR PRODUCTO
+Los estilos se colocaron directamente en 
+el html ya que tenian un inconveniente de version
+
+}*/
+
+/*ESTILOS DEL FOOTER*/
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-container {
+    margin-top: 14px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-item a {
+    text-decoration: none;
+}
+
+.footer-item a span {
+    font-size: 2rem;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
