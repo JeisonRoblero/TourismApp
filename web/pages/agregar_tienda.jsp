@@ -24,7 +24,7 @@
 
     <header class="start_localtienda">
         <div class="header-local">
-            <img src="C:\Users\Noe Gomez\Downloads\agregar_tienda\img_local\agregartienda.png">
+            <img src="../images/agregartienda.png">
         </div>
 
     </header>
@@ -139,7 +139,7 @@
     </footer>
 
     <!--JavaScript al final del cuerpo para una carga optimizada-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
 
 
     <!-- Compiled and minified JavaScript -->
