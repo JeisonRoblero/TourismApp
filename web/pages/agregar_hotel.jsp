@@ -7,7 +7,7 @@
 
     <title>Agregar hotel</title>
 
-    <link rel="stylesheet" href="agregarhotel-style.css">
+    <link rel="stylesheet" href="../css/agregarhotel-style.css">
 
         <!-- CSS compilado y minificado -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -24,7 +24,7 @@
 
     <header class="start_local">
         <div class="header-local">
-            <img src="C:\Users\Noe Gomez\Downloads\agregar_hotel\img_local\agregarhotelbien.png">
+            <img src="../images/agregarhotelbien.png">
         </div>
 
     </header>
@@ -139,7 +139,7 @@
     </footer>
 
     <!--JavaScript al final del cuerpo para una carga optimizada-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
 
 
     <!-- Compiled and minified JavaScript -->
