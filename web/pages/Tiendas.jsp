@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="style-tiendas.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/style-tiendas.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <title>Menu</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
 
     <header>
         <div class="header-title">
-            <img src="images/Group 393.png" alt="Nombre Pantalla">
+            <img src="../images/Group 393.png" alt="Nombre Pantalla">
         </div>
     </header>
 <main>
@@ -38,38 +38,38 @@
         <div class="body-cards">
 
             <div class="body-card-item">
-                <img src="images\Logo 5.png" alt="Comercio">
+                <img src="../images/Logo 5.png" alt="Comercio">
                 <h3 class="card-title">Ralph Lauren</h3>
                 <h4 class="card-distance">2.5km</h4>
                 <div class="card-score">
-                    <img src="images\1 Stars.png" alt="Calificacion">
+                    <img src="../images/1 Stars.png" alt="Calificacion">
                 </div>
             </div>
 
             <div class="body-card-item">
-                <img src="images\Logo 8.png" alt="Comercio">
+                <img src="../images/Logo 8.png" alt="Comercio">
                 <h3 class="card-title">Pull & Bear</h3>
                 <h4 class="card-distance">10.8km</h4>
                 <div class="card-score">
-                    <img src="images\2 Stars.png" alt="Calificacion">
+                    <img src="../images/2 Stars.png" alt="Calificacion">
                 </div>
             </div>
 
             <div class="body-card-item">
-                <img src="images\Logo 7.png" alt="Comercio">
+                <img src="../images/Logo 7.png" alt="Comercio">
                 <h3 class="card-title">Bershka</h3>
                 <h4 class="card-distance">800m</h4>
                 <div class="card-score">
-                    <img src="images\3 Stars.png" alt="Calificacion">
+                    <img src="../images/3 Stars.png" alt="Calificacion">
                 </div>
             </div>
 
             <div class="body-card-item">
-                <img src="images\Logo 5.png" alt="Comercio">
+                <img src="../images/Logo 5.png" alt="Comercio">
                 <h3 class="card-title">Zara</h3>
                 <h4 class="card-distance">0.5km</h4>
                 <div class="card-score">
-                    <img src="images\4 Stars.png" alt="Calificacion">
+                    <img src="../images/4 Stars.png" alt="Calificacion">
                 </div>
             </div>
 
