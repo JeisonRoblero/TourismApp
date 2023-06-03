@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="style-c-comercio.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/style-c-comercio.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <Link rel="stylesheet” href=" main.css">
+    <Link rel="stylesheet” href="../css/main.css">
     <title>Menu</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,7 @@
 
     <header>
         <div class="header-title">
-            <img src="images/Group 424.png" alt="Nombre Pantalla">
+            <img src="../images/Group 424.png" alt="Nombre Pantalla">
         </div>
     </header>
     <main>
@@ -43,7 +43,7 @@
             <div class="body-cards">
 
                 <div class="body-card-item">
-                    <img src="images\Rectangle 1.png" alt="Comercio">
+                    <img src="../images/Rectangle 1.png" alt="Comercio">
                     <h3 class="card-title">Combo 1</h3>
                     <h4 class="card-distance">Hotel Vista Nueva y transporte las Esmeraldas</h4>
                     <div class="card-score">
@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="body-card-item">
-                    <img src="images\Rectangle 2.png" alt="Comercio">
+                    <img src="../images/Rectangle 2.png" alt="Comercio">
                     <h3 class="card-title">Combo 2</h3>
                     <h4 class="card-distance">Recorrido por el lago, transporte Esmeralda y comida en Rincón Steak</h4>
                     <div class="card-score">
@@ -69,7 +69,7 @@
                 </div>
 
                 <div class="body-card-item">
-                    <img src="images\Rectangle 3.png" alt="Comercio">
+                    <img src="../images/Rectangle 3.png" alt="Comercio">
                     <h3 class="card-title">Combo 3</h3>
                     <h4 class="card-distance">Hotel Vista al Mar y
                     café ilimitado en StarBucks</h4>
@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="body-card-item">
-                    <img src="images\Rectangle 4.png" alt="Comercio">
+                    <img src="../images/Rectangle 4.png" alt="Comercio">
                     <h3 class="card-title">Combo 4</h3>
                     <h4 class="card-distance">Hotel Hawai, desayuno y almuerzo restaurante Rincón del Steak</h4>
                     <div class="card-score">
