@@ -7,7 +7,7 @@
 
     <title>Agregar tienda</title>
 
-    <link rel="stylesheet" href="../images/agregartienda-style.css">
+    <link rel="stylesheet" href="../css/agregartienda-style.css">
 
         <!-- CSS compilado y minificado -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
