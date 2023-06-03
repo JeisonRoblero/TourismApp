@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="style-hoteleria.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../style-hoteleria.css">
+    <link rel="stylesheet" href="../styles.css">
     <title>Menu</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
     
     <header>
         <div class="header-title">
-            <img src="images/Group 411.png" alt="Nombre Pantalla">
+            <img src="../images/Group 411.png" alt="Nombre Pantalla">
         </div>
     </header>
 
@@ -31,38 +31,38 @@
             <div class="body-cards">
                 
                 <div class="body-card-item">
-                    <img src="images\Site 1.png" alt="Comercio">
+                    <img src="../images/Site 1.png" alt="Comercio">
                     <h3 class="card-title">Hotel el Omni</h3>
                     <h4 class="card-distance">2.5km</h4>
                     <div class="card-score">
-                        <img src="images\1 Stars.png" alt="Calificacion">
+                        <img src="../images/1 Stars.png" alt="Calificacion">
                 </div>
                 </div>
                 
                 <div class="body-card-item">
-                    <img src="images\Site 2.png" alt="Comercio">
+                    <img src="../images/Site 2.png" alt="Comercio">
                     <h3 class="card-title">Hotel Kamasutra</h3>
                     <h4 class="card-distance">10.8km</h4>
                     <div class="card-score">
-                        <img src="images\2 Stars.png" alt="Calificacion">
+                        <img src="../images/2 Stars.png" alt="Calificacion">
                     </div>
                 </div>
 
                 <div class="body-card-item">
-                    <img src="images\Site 3.png" alt="Comercio">
+                    <img src="images/Site 3.png" alt="Comercio">
                     <h3 class="card-title">Hotel el Conquistador</h3>
                     <h4 class="card-distance">800m</h4>
                     <div class="card-score">
-                        <img src="images\3 Stars.png" alt="Calificacion">
+                        <img src="../images/3 Stars.png" alt="Calificacion">
                     </div>
                 </div>
 
                 <div class="body-card-item">
-                    <img src="images\Site 4.png" alt="Comercio">
+                    <img src="../images/Site 4.png" alt="Comercio">
                     <h3 class="card-title">Hotel 5 Letras</h3>
                     <h4 class="card-distance">0.5km</h4>
                     <div class="card-score">
-                        <img src="images\4 Stars.png" alt="Calificacion">
+                        <img src="../images/4 Stars.png" alt="Calificacion">
                     </div>
                 </div>
 
@@ -120,22 +120,22 @@
 <div class="body-options">
     <div class="option-icon">
         <a href="#">
-            <img src="images\Mini 350.png" alt="Comidas">
+            <img src="../images/Mini 350.png" alt="Comidas">
         </a>
     </div>
     <div class="option-icon">
         <a href="#">
-            <img src="images\Mini 369.png" alt="Transporte">
+            <img src="../images/Mini 369.png" alt="Transporte">
         </a>
     </div>
     <div class="option-icon">
         <a href="#">
-            <img src="images\Mini 371.png" alt="Combos">
+            <img src="../images/Mini 371.png" alt="Combos">
         </a>
     </div>
     <div class="option-icon">
         <a href="#">
-            <img src="images\Mini 373.png" alt="Tiendas">
+            <img src="../images/Mini 373.png" alt="Tiendas">
         </a>
     </div>
 </div>
